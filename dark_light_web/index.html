@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark_Light</title>
+    <style>
+      :root {
+        --primary-color: #fff;
+        --secondary-color: #000;
+      }
+      .dark {
+        --primary-color: #000;
+        --secondary-color: #fff;
+      }
+      .container {
+        position: relative;
+        top: 200px;
+        left: 100px;
+        color: var(--secondary-color);
+      }
+      .container h1 span {
+        color: rgb(6, 223, 6);
+      }
+      #mode {
+        border-style: dashed;
+        border-color: rgb(6, 223, 6);
+        border-radius: 10px;
+        text-decoration: none;
+        padding: 5px;
+        color: rgb(6, 223, 6);
+        font-size: 30px;
+      }
+      .col {
+        background-color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body class="col">
+    <div class="container">
+      <h1>I AM <span>BALAMURUGAN</span> KARMUHIL</h1>
+      <p>
+        This is my 3 day project on 30 days 30 javascript project.this ia a
+        <br />
+        website with light and dark mode converter
+      </p>
+      <br />
+      <a id="mode">change theme</a>
+    </div>
+    <script>
+      var mode = document.getElementById("mode");
+      mode.onclick = function () {
+        document.body.classList.toggle("dark");
+        if (document.body.classList.contains("dark")) {
+          document.getElementById("mode").innerHTML = "change to light";
+        } else {
+          document.getElementById("mode").innerHTML = "change to dark";
+        }
+      };
+    </script>
+  </body>
+</html>
